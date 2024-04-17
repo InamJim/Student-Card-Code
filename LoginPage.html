@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <h2>Login</h2>
+    <form class="form" id="login-form" action="#" method="POST">
+        <div class="input-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div class="input-group">
+            <label for="surname">Surname:</label>
+            <input type="text" id="surname" name="surname" required>
+        </div>
+        <div class="input-group">
+            <label for="student-number">Student Number:</label>
+            <input type="text" id="student-number" name="student-number" required>
+        </div>
+        <div class="input-group">
+            <label for="id-number">ID Number:</label>
+            <input type="text" id="id-number" name="id-number" required>
+        </div>
+        <div class="input-group">
+            <label for="campus">Campus:</label>
+            <select id="campus" name="campus" required>
+                <option value="">Select Campus</option>
+                <option value="Bellville">Bellville</option>
+                <option value="District6">District 6</option>
+            </select>
+        </div>
+        <button type="submit">Login</button>
+    </form>
+</div>
+</body>
+</html>
