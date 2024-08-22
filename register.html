@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - CPUT Mobile App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- iPhone Screen Container -->
+    <div class="iphone-container">
+        <!-- iPhone Status Bar -->
+        <div class="status-bar">
+            <span class="time">9:41</span>
+            <div class="status-icons">
+                <span class="signal">•••••</span>
+                <span class="wifi">Wi-Fi</span>
+                <span class="battery">100%</span>
+            </div>
+        </div>
+        
+        <!-- Screen 2: Register -->
+        <div class="screen" id="screen2">
+            <h2>Register</h2>
+            <img src="download2.png" alt="Profile Picture" class="profile-pic">
+            <form id="registerForm">
+                <input type="text" id="name" placeholder="Name and Surname" required>
+                <input type="email" id="email" placeholder="Student Email" required>
+                <select id="campus" required>
+                    <option value="" disabled selected>Select Campus</option>
+                    <option value="district6">District 6</option>
+                    <option value="bellville">Bellville</option>
+                </select>
+                <select id="year" required>
+                    <option value="" disabled selected>Select Year of Study</option>
+                    <option value="1">Year of Study: 1</option>
+                    <option value="2">Year of Study: 2</option>
+                    <option value="3">Year of Study: 3</option>
+                    <option value="4">Year of Study: 4</option>
+                </select>
+                <button type="submit" class="btn-primary" onclick="showPopup(event)">Register</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Popup Message -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <p>Registration Successful!</p>
+        </div>
+    </div>
+
+    <script>
+        function showPopup(event) {
+            event.preventDefault(); // Prevent form submission
+
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var campus = document.getElementById('campus').value;
+            var year = document.getElementById('year').value;
+
+            // Validate fields
+            if (name && email && campus && year) {
+                document.getElementById('popup').style.display = 'flex'; // Show the popup
+                setTimeout(function() {
+                    document.getElementById('popup').style.display = 'none'; // Hide the popup after 3 seconds
+                    document.getElementById('registerForm').reset(); // Optional: Reset the form
+                }, 3000);
+            } else {
+                alert('Please fill out all fields.');
+            }
+        }
+    </script>
+
+</body>
+</html>

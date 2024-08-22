@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account - CPUT Mobile App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- iPhone Screen Container -->
+    <div class="iphone-container">
+
+        <!-- iPhone Status Bar -->
+        <div class="status-bar">
+            <span class="time">9:41</span>
+            <div class="status-icons">
+                <span class="signal">•••••</span>
+                <span class="wifi">Wi-Fi</span>
+                <span class="battery">100%</span>
+            </div>
+        </div>
+
+        <!-- Screen 1: Create Account -->
+        <div class="screen" id="screen1">
+            <h2>Create an account</h2>
+            <form id="createAccountForm" action="register.html" method="GET">
+                <p>Enter your email to sign up for this site:</p>
+                <input type="email" id="email" name="email" placeholder="email@mycput.ac.za" required>
+                <button type="submit" class="btn-primary">Sign up with email</button>
+            </form>
+            <p>or continue with</p>
+            <button class="btn-secondary" disabled>Microsoft Office</button>
+            <p class="terms">By clicking continue, you agree to the Terms of Service and Privacy Policy.</p>
+        </div>
+
+    </div>
+
+    <script>
+        // JavaScript for email validation
+        document.getElementById('createAccountForm').addEventListener('submit', function(event) {
+            var email = document.getElementById('email').value;
+            if (!email.endsWith('@mycput.ac.za')) {
+                alert('Email must end with @mycput.ac.za');
+                event.preventDefault(); // Prevent form submission
+            }
+        });
+    </script>
+    
+</body>
+</html>
