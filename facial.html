@@ -40,7 +40,13 @@
         const resultText = document.getElementById('result');
 
         // Access the user's webcam
-        navigator.mediaDevices.getUserMedia({ video: true })
+        navigator.mediaDevices.getUserMedia
+        .catch((error) => {
+    console.error('Error accessing webcam: ', error);
+    resultText.textContent = 'Unable to access webcam. Please check your permissions.';
+});
+
+        ({ video: true })
             .then((stream) => {
                 video.srcObject = stream;
             });
