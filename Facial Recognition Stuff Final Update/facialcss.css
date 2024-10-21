@@ -1,0 +1,105 @@
+@font-face {
+    font-family: 'Gagalin';
+    src: url('Gagalin-Regular.ttf') format('truetype');
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('CPUT_Cape_Town_Campus.jpg'); 
+    background-size: cover;
+    font-family: 'Gagalin', Arial, sans-serif;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    height: 80px;
+    position: relative;
+}
+.logo img {
+    height: 300px; 
+    width: auto;
+    margin-top: 60px; 
+    transition: height 1.0s, margin-top 1.0s; 
+}
+.logo img:hover {
+    transform: scale(1.1); 
+    opacity: 0.8;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+h1 {
+    font-size: 50px;
+    color: #000000;
+    margin: 0;
+    text-align: center;
+    flex-grow: 1;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+h1 .blue-text {
+    color: #0000a5;
+}
+.hamburger-menu {
+    font-size: 24px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+.hamburger-menu:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #0000a5; /* Visible focus state */
+}
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none; 
+    opacity: 0;    
+    transition: opacity 0.7s ease, max-height 0.7s ease; 
+    max-height: 0; 
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 10px;
+    color: #000;
+    text-decoration: none;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+.show {
+    display: block; 
+    opacity: 1;    
+    max-height: 200px; 
+}
+.video {
+    text-align: center;
+}
+.capture {
+    background-color: #0000a5; 
+    color: white;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    backdrop-filter: blur(10px);
+    font-family: 'Gagalin', Arial, sans-serif;
+}
