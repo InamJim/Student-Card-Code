@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CardPro - Login</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="CPUT 2.png" alt="CardPro Logo">
+        </div>
+        <h1>Card<span class="blue-text">Pro</span></h1>
+        <div class="dropdown">
+            <button class="hamburger-menu" onclick="toggleDropdown()">&#9776;</button>
+            <div class="dropdown-content">
+                <a href="index.html">Home Page</a>
+                <a href="registration.html">Registration</a>
+                <a href="login.html">Login</a>
+                <a href="about.html">About</a>
+            </div>
+    </header>
+    <script src="Java.js"></script>
+    <main>
+        <div class="login-section">
+            <h2>Login to Card<span class="blue-text">Pro</span></h2>
+            <form class="login-form" action="submit_login.php" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="surname">Surname:</label>
+                <input type="text" id="surname" name="surname" required>
+
+                <label for="student-number">Student Number:</label>
+                <input type="text" id="student-number" name="student-number" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="submit" class="login-button">LOGIN</button>
+            </form>
+            <p>Don't have an account? <a href="#">Register here</a>.</p>
+        </div>
+    </main>
+</body>
+</html>

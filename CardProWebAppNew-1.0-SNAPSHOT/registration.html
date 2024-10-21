@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CardPro - Registration</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="CPUT 2.png" alt="CardPro Logo">
+        </div>
+        <h1>Card<span class="blue-text">Pro</span></h1>
+        <div class="dropdown">
+            <button class="hamburger-menu" onclick="toggleDropdown()">&#9776;</button>
+            <div class="dropdown-content">
+                <a href="index.html">Home Page</a>
+                <a href="registration.html">Registration</a>
+                <a href="login.html">Login</a>
+                <a href="about.html">About</a>
+            </div>
+    </header>
+    <script src="Java.js"></script>
+    <main>
+        <div class="registration-section">
+            <h2>Register for Card<span class="blue-text">Pro</span></h2>
+            <form class="registration-form" action="submit_registration.php" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="surname">Surname:</label>
+                <input type="surname" id="surname" name="surname" required>
+
+                <label for="student-nr">Student Nr.:</label>
+                <input type="student-nr" id="student-nr" name="student-nr" required>
+
+                <label for="id-number">Id Number:</label>
+                <input type="number" id="id-number" name="id-number" required>
+
+                <label for="campus">Campus:</label>
+                <input type="campus" id="campus" name="campus" required>
+
+                <label for="email">Student Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="year">Year of Study:</label>
+                <input type="year" id="year" name="year" required>
+
+                <button type="submit" class="register-button">REGISTER</button>
+            </form>
+            <p>Already have an account? <a href="#">Login here</a>.</p>
+        </div>
+    </main>
+</body>
+</html>

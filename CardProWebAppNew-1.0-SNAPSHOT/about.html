@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CardPro - Student Card Application</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="CPUT 2.png" alt="CardPro Logo">
+        </div>
+        <h1>Card<span class="blue-text">Pro</span></h1>
+        <div class="dropdown">
+            <button class="hamburger-menu" onclick="toggleDropdown()">&#9776;</button>
+            <div class="dropdown-content" id="dropdown">
+                <a href="index.html">Home Page</a>
+
+                <a href="registration.html">Registration</a>
+                <a href="login.html">Login</a>
+                <a href="about.html">About</a>
+            </div>
+        </div>
+    </header>
+    <script src="Java.js"></script> 
+    <main>
+        <section class="registration-section">
+            <h2>Apply for your <span class="blue-text">Student Card</span></h2>
+            <form id="card-application-form" class="registration-form">
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName" name="fullName" required>
+
+                <label for="studentId">Student Nr:</label>
+                <input type="text" id="studentId" name="studentId" required>
+
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="course">Course Enrolled:</label>
+                <input type="text" id="course" name="course" required>
+
+                <label for="course">Campus:</label>
+                <input type="text" id="Campus" name="Campus" required>
+
+                <label for="uploadPhoto">Upload Photo:</label>
+                <input type="file" id="uploadPhoto" name="uploadPhoto" accept="image/*" required>
+
+                <label for="proofOfReg">Proof of Registration:</label>
+                <input type="file" id="proofOfReg" name="proofOfReg" accept="file/*" required>
+
+                <label for="lastYearStudentcard">Last Year Student Card:</label>
+                <input type="file" id="lastYearStudentcard" name="lastYearStudentcard" accept="file/*" required>
+
+                <label for="id">Pic of ID (Front&BAck):</label>
+                <input type="file" id="id" name="id" accept="file/*" required>
+
+                <label for="otherDocuments">Other Documents:</label>
+                <input type="file" id="otherDocuments" name="otherDocuments" accept="file/*" required>
+
+                
+
+                <button type="submit" class="register-button">Submit Application</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 CardPro. All Rights Reserved.</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
