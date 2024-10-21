@@ -1,0 +1,10 @@
+com\example\demo\config\WebConfig.class
+com\example\demo\DemoApplication.class
+com\example\demo\facialrecognition\repository\ImageRepository.class
+com\example\demo\facialrecognition\service\ImageService.class
+com\example\demo\user\repository\UserRepository.class
+com\example\demo\facialrecognition\model\Images.class
+com\example\demo\user\model\User.class
+com\example\demo\user\controller\UserController.class
+com\example\demo\user\service\UserService.class
+com\example\demo\facialrecognition\controller\ImageController.class
